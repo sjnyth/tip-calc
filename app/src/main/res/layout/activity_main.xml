@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B3FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/backgroundImage"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundImage"
+        app:layout_constraintStart_toStartOf="@id/backgroundImage"
+        app:layout_constraintEnd_toEndOf="@id/backgroundImage" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/header"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        android:layout_marginTop="150dp" />
+
+
+    <EditText
+        android:id="@+id/bill_total"
+        android:hint="@string/total_bill"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <SeekBar
+        android:id="@+id/tipSlider"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:max="50"
+        android:progress="0"
+        app:layout_constraintTop_toBottomOf="@+id/bill_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.3"/>
+
+    <TextView
+        android:id="@+id/tipPercentage"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_percent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tipSlider"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.3"/>
+
+    <TextView
+        android:id="@+id/partysize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/partysize"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/partySizeSpinner"
+        app:layout_constraintStart_toStartOf="@id/title"
+        />
+
+    <Spinner
+        android:id="@+id/partySizeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        app:layout_constraintStart_toEndOf="@id/partysize"
+        app:layout_constraintTop_toBottomOf="@id/tipPercentage"
+        app:layout_constraintVertical_bias="0" />
+
+    <Switch
+        android:id="@+id/round_tip"
+        android:layout_width="0dp"
+        android:checked="true"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/partySizeSpinner"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/round_tip"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.38"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/round_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/calculate"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/totalAmount"
+        android:text="@string/total_amount"
+        android:paddingTop="12dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="header">Tip Well</string>
+    <string name="total_bill">Total bill amount</string>
+    <string name="bill_title">Bill Total:</string>
+    <string name="tip_percent">%d%% Tip</string>
+    <string name="round_tip">Round tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="total_amount">$0.00</string>
+    <string name="partysize">No. of people</string>
+    <string-array name="party_sizes">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+</resources>
