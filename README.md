@@ -2,8 +2,6 @@
 
 # AND101 Project 4 - Tip Calculator 🍸 
 
-Submitted by: **Saujanya Thapaliya**
-
 Time spent: **4** hours spent in total
 
 ## Summary 🧮
